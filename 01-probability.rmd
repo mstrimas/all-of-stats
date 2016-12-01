@@ -43,7 +43,7 @@ results <- tribble(~outcome, ~wins,
                    "stay",   sum(choice == prize) / length(prize))
 ggplot(results, aes(x = outcome, y = wins)) +
   geom_col() + 
-  labs(x = NA, y = "Wins",
+  labs(x = NULL, y = "Wins",
        title = "The Monty Hall Problem",
        subtitle = "Switching doors doubles your chances of winning")
 ```

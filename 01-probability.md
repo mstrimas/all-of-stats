@@ -37,7 +37,7 @@ results <- tribble(~outcome, ~wins,
                    "stay",   sum(choice == prize) / length(prize))
 ggplot(results, aes(x = outcome, y = wins)) +
   geom_col() + 
-  labs(x = NA, y = "Wins",
+  labs(x = NULL, y = "Wins",
        title = "The Monty Hall Problem",
        subtitle = "Switching doors doubles your chances of winning")
 ```
@@ -99,9 +99,9 @@ tibble(actual = map_dbl(ns, sim_x, p = p),
 
 |actual   |expected |
 |:--------|:--------|
-|3.0043   |3        |
-|29.9539  |30       |
-|299.8814 |300      |
+|3.0064   |3        |
+|30.0581  |30       |
+|299.9620 |300      |
 
 # Exercise 23
 
@@ -130,7 +130,7 @@ results %>%
 
 |P(A)   |P(B)   |P(AB)  |P(A)P(B)  |
 |:------|:------|:------|:---------|
-|0.4976 |0.6681 |0.3299 |0.3324466 |
+|0.5031 |0.6731 |0.3349 |0.3386366 |
 
 So, `P(AB) = P(A)P(B) = 1/3`. Next construct two events that aren't independent and check that this equality does not hold. Take A = {1,2,3,4} and B = {4,5,6}, so that `P(AB) = P(A)P(B|A) = (2/3) * (1/4) = 1/6` 
 
@@ -160,6 +160,6 @@ results %>%
 
 |P(A)   |P(B)   |P(AB)  |P(A)P(B)  |
 |:------|:------|:------|:---------|
-|0.6797 |0.4925 |0.1715 |0.3347522 |
+|0.6658 |0.5002 |0.1693 |0.3330332 |
 
 So `P(AB) < P(A)P(B)` because we didn't account for the dependence.
