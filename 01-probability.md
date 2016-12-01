@@ -97,11 +97,11 @@ tibble(actual = map_dbl(ns, sim_x, p = p),
 
 
 
-actual     expected 
----------  ---------
-2.9733     3        
-29.9951    30       
-300.1014   300      
+|actual   |expected |
+|:--------|:--------|
+|3.0043   |3        |
+|29.9539  |30       |
+|299.8814 |300      |
 
 # Exercise 23
 
@@ -128,9 +128,9 @@ results %>%
 
 
 
-P(A)     P(B)     P(AB)    P(A)P(B) 
--------  -------  -------  ---------
-0.5013   0.6723   0.3368   0.337024 
+|P(A)   |P(B)   |P(AB)  |P(A)P(B)  |
+|:------|:------|:------|:---------|
+|0.4976 |0.6681 |0.3299 |0.3324466 |
 
 So, `P(AB) = P(A)P(B) = 1/3`. Next construct two events that aren't independent and check that this equality does not hold. Take A = {1,2,3,4} and B = {4,5,6}, so that `P(AB) = P(A)P(B|A) = (2/3) * (1/4) = 1/6` 
 
@@ -158,8 +158,8 @@ results %>%
 
 
 
-P(A)     P(B)     P(AB)   P(A)P(B)  
--------  -------  ------  ----------
-0.6628   0.5015   0.17    0.3323942 
+|P(A)   |P(B)   |P(AB)  |P(A)P(B)  |
+|:------|:------|:------|:---------|
+|0.6797 |0.4925 |0.1715 |0.3347522 |
 
 So `P(AB) < P(A)P(B)` because we didn't account for the dependence.
